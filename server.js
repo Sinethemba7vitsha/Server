@@ -3,12 +3,11 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const corsOptions = {
-  origin: 'https://sinethemba-vitsha.github.io/my-todolist',
-  methods: ['GET', 'POST', 'DELETE'],
-  allowedHeaders: ['Content-Type']
+  origin: 'https://sinethemba-vitsha.github.io/my-todolist',  
+  methods: ['GET', 'POST', 'DELETE', 'PUT'],
+  allowedHeaders: ['Content-Type'],
 };
-
-app.use(cors(corsOptions));
+app.use(cors(corsOptions));  
 
 
 // MongoDB Atlas connection string (with URL-encoded password)
