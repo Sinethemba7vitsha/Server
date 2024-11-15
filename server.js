@@ -18,6 +18,11 @@ mongoose.connect(mongoURI)
 const taskSchema = new mongoose.Schema({ description: String });
 const Task = mongoose.model('Task', taskSchema);
 
+// Root route
+app.get('/', (req, res) => {
+  res.send('Welcome to the Task API');
+});
+
 // Get all tasks
 app.get('/tasks', async (req, res) => {
   try {
