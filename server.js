@@ -2,9 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-const app = express();
-app.use(express.json());
-app.use(cors());
+const corsOptions = {
+  origin: 'https://sinethemba-vitsha.github.io/my-todolist',
+  methods: ['GET', 'POST', 'DELETE'],
+  allowedHeaders: ['Content-Type']
+};
+
+app.use(cors(corsOptions));
+
 
 // MongoDB Atlas connection string (with URL-encoded password)
 const mongoURI = 'mongodb+srv://vitsha:VITSHa%4097@todolist.o8nhn.mongodb.net/?retryWrites=true&w=majority&appName=Todolist';
