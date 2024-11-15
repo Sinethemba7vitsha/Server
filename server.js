@@ -2,10 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-const app = express();
-app.use(express.json());
-app.use(cors());
-
+// Define CORS options
+const corsOptions = {
+  origin: 'https://your-frontend-url.vercel.app', // Replace with your front-end URL
+  methods: ['GET', 'POST', 'DELETE', 'PUT'],
+  allowedHeaders: ['Content-Type'],
+};
 // MongoDB Atlas connection string (with URL-encoded password)
 const mongoURI = 'mongodb+srv://vitsha:VITSHa%4097@todolist.o8nhn.mongodb.net/?retryWrites=true&w=majority&appName=Todolist';
 
