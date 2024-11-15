@@ -49,7 +49,5 @@ app.delete('/tasks/:id', async (req, res) => {
   }
 });
 
-// Start server
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
-});
+// Vercel serverless function handler
+module.exports = app;
